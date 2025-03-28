@@ -51,7 +51,7 @@
 	<p>
 	<p>
     <input type="text" id="searchBar" placeholder="Type the song name, number or learn">
-	<button id="clearSearch">Clear</button>
+	<br>Pull down to refresh / clear the page
 
     <div id="noResults">No song found <i class="fa fa-meh-o"></i>, please check your spelling</div>
     <div class="card-container">
@@ -288,7 +288,7 @@
        $(document).ready(function(){
 
     let typingTimer;
-    const doneTypingInterval = 2000; // 2 seconds
+    const doneTypingInterval = 1500; // 1.5 seconds
 
     $('#searchBar').on('input', function() {
         clearTimeout(typingTimer);
