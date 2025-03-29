@@ -27,9 +27,9 @@
     <div class="banner"></div>
 	<h1><i class="fa-solid fa-wrench"></i> Generate Song Template</h1>
 	<div style="text-align:left; padding:20px 15% 20px 15%;">
-    Link: <br>
+    <!-- Link: <br>
     <input type="text" id="link" placeholder="Enter Dropbox link">
-    <p>
+    <p> -->
     Song Name: <br>
     <input type="text" id="songName" placeholder="Enter song number. name - 123. My Song">
 	<p>
@@ -52,7 +52,7 @@
 			 });
 			
         function generateTemplate() {
-            let link = document.getElementById('link').value;
+
             let songName = document.getElementById('songName').value;
 			let dataName = document.getElementById('songName').value;
            
@@ -61,7 +61,14 @@
 			};
 			
 			let coverNumber = getBeforeDot(songName);
-			
+
+		
+			function cleanFileName(fileName) {
+    return fileName.replace(/\. /, "-").replace(/ /g, "-");
+}
+
+let cleanedName = cleanFileName(songName);
+		
 			let learnChecked = document.getElementById('learn').checked;
             
             if (learnChecked) {
@@ -69,7 +76,7 @@
             }
 			
             let template = `
-<a class="link-nochange" href="${link}">
+<a class="link-nochange" href="pdfs/${cleanedName}.pdf">
  <div class="card" data-name="${dataName}">
  <p>${songName}</p> 
  <img src="covers/${coverNumber}.jpg">
