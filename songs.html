@@ -255,7 +255,13 @@
 </a>
 
     <script>
-	
+	function isMobileDevice() {
+    return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+}
+
+if (isMobileDevice()) {
+    window.location.href = "mobile.html"; // Change this to your mobile page URL
+}
 	$(document).ready(function(){
     $('#searchBar').focus();
 });
