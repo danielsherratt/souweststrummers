@@ -9,6 +9,17 @@
 	<link rel="stylesheet" href="assets/style.css">
 	<script src="https://kit.fontawesome.com/7765d5db02.js" crossorigin="anonymous"></script>
 	
+	<script>
+	// Check if the device is a mobile
+	function isMobileDevice() {
+		return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+	}
+
+	if (isMobileDevice()) {
+		window.location.href = "mobile.html"; // Change this to your mobile page URL
+	}
+	</script>
+	
 </head>
 <body>
 <div class="navbar">
@@ -1540,14 +1551,6 @@
 
    <script>
 $(document).ready(function () {
-	// Check if the device is a mobile
-	function isMobileDevice() {
-		return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-	}
-
-	if (isMobileDevice()) {
-		window.location.href = "mobile.html"; // Change this to your mobile page URL
-	}
     // Focus on search bar when page loads
     $('#searchBar').focus();
 
