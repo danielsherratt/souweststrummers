@@ -1540,6 +1540,14 @@
 
    <script>
 $(document).ready(function () {
+	// Check if the device is a mobile
+	function isMobileDevice() {
+		return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+	}
+
+	if (isMobileDevice()) {
+		window.location.href = "mobile-version.html"; // Change this to your mobile page URL
+	}
     // Focus on search bar when page loads
     $('#searchBar').focus();
 
