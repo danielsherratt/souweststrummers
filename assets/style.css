@@ -17,7 +17,8 @@ body {
 }
 
 h1, h2, h3 {
-    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 img {padding-top:10px;}
