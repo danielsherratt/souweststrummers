@@ -32,7 +32,7 @@
 <!-- Add new songs below, please put them in numbered order -->
 	
 <a class="link-nochange" href="viewer?pdf=1-All-I-Have-to-Do-Is-Dream.pdf">
- <div class="card" data-name="1. All I Have to Do Is Dream">
+ <div class="card" data-name="1. All I Have to Do Is Dream" data-chords="A, F, G">
  <p>1. All I Have to Do Is Dream</p> 
  <img src="covers/art.jpg">
  </div>
@@ -1537,8 +1537,12 @@
     </div>
 <script>
 $(document).ready(function () {
+
     // Focus on search bar when page loads
     $('#searchBar').focus();
+
+    // Define the preset chords to search for when "learn" is entered
+    var learnChords = ["a", "c", "f"];
 
     // Search functionality
     $('#searchBar').on('keyup', function () {
@@ -1546,8 +1550,18 @@ $(document).ready(function () {
         var visibleCards = 0;
 
         $('.card').each(function () {
-            var match = $(this).data('name').toLowerCase().includes(value);
+            var nameMatch = $(this).data('name').toLowerCase().includes(value);
+            var chords = $(this).data('chords') ? $(this).data('chords').toLowerCase() : "";
+            var chordsMatch = chords.includes(value);
+
+            // If the user types "learn", check for songs that contain any of the preset chords
+            if (value === "learn") {
+                chordsMatch = learnChords.some(chord => chords.includes(chord));
+            }
+
+            var match = nameMatch || chordsMatch; // Show if either matches
             $(this).toggle(match);
+
             if (match) visibleCards++;
         });
 
