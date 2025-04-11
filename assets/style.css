@@ -230,12 +230,8 @@ a.link-nochange:hover {
     color: #000;
 }
 
-.ad {
-	max-width: 150px; /* or any size you want */
-	max-height: 100px;
-	height: auto;
-	width: auto;
-}
+
+
 
 
 main {
