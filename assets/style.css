@@ -229,3 +229,20 @@ a.link-nochange:hover {
     text-decoration: none;
     color: #000;
 }
+
+.ad {
+	max-width: 300px; /* or any size you want */
+	max-height: 300px;
+	height: auto;
+	width: auto;
+}
+
+
+main {
+	flex: 1;
+	padding: 20px;
+}
+footer {
+	text-align: center;
+	padding: 15px 0;
+}
