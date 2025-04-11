@@ -242,3 +242,25 @@ footer {
 	text-align: center;
 	padding: 15px 0;
 }
+
+.subnav {
+  background-color: #f0f0f0;
+  padding: 10px 20px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.subnav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.subnav a:hover {
+  color: #0077cc;
+}
+
+#learn, #history, #song {padding-top: 40px;}
