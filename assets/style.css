@@ -231,8 +231,8 @@ a.link-nochange:hover {
 }
 
 .ad {
-	max-width: 250px; /* or any size you want */
-	max-height: 200px;
+	max-width: 150px; /* or any size you want */
+	max-height: 100px;
 	height: auto;
 	width: auto;
 }
